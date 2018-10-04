@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
-
+import $ from 'jquery';
+import user from '../controllers/Axios'
 
 class CharSelect extends Component {
 
@@ -9,13 +9,19 @@ class CharSelect extends Component {
     }
 
   render() {
+    const { user } = user;
+    console.log(user);
     const { auth } = this.props;
+    $( document ).ready(function() {
+  });
+
     return (
         <div>
             
             
 <header id="Header">
-            <h1>Character Selection</h1>
+            <p className="charSelect"><button className="charSelectButton" onClick={user.find}>Select Character</button></p>
+            
             {
               auth.isAuthenticated() ?
                 <p className="auth-text"><button className="auth-link" onClick={auth.logout}>Logout</button></p> :

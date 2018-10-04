@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
 import Login from './Login'
 import My404Component from './404'
@@ -29,6 +29,7 @@ const Main = ({props}) => (
             handleAuthentication(props);
             return <Callback auth={auth} {...props} />
           }}/>
+          <Route component={My404Component}/>
         
       </Switch>
   </main>

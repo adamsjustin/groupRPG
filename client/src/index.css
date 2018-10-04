@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   height: 100%;
-  background-image: url('Background.svg');
+  background-image: url('../src/images/DarknessBackground.svg');
   background-size: cover;
   background-repeat: no-repeat;
 }

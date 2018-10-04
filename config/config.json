@@ -6,6 +6,11 @@
         "projectId": "tsrpg-97122",
         "storageBucket": "tsrpg-97122.appspot.com",
         "messagingSenderId": "788712141019"
+  },
+
+  "module.exports" : {
+    "MONGO_URI": "process.env.MONGO_URI || 'mongodb://localhost/apijwt'"
   }
 
 }
+

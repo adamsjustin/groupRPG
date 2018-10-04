@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 
 
-
 class Home extends Component {
 
   componentWillMount(){
@@ -11,13 +10,13 @@ class Home extends Component {
 
   render() {
     const { auth } = this.props;
+
     return (
         <div>
             
             
-<header id="header">
-<Header/>
-            
+<header id="Header">
+<Header/> 
             {
               auth.isAuthenticated() ?
                 <p className="auth-text"><button className="auth-link" onClick={auth.logout}>Logout</button></p> :

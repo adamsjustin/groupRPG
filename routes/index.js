@@ -1,19 +1,17 @@
-// module.exports = function(passport){
+import express from 'express';
+import user from '../models/user';
 
-   
-//     /* Handle Login POST */
-//     router.post('/login', passport.authenticate('login', {
-//       successRedirect: '/home',
-//       failureRedirect: '/404',
-//       failureFlash : true 
-//     }));
-   
-//     /* Handle Registration POST */
-//     router.post('/signup', passport.authenticate('signup', {
-//       successRedirect: '/home',
-//       failureRedirect: '/signup',
-//       failureFlash : true 
-//     }));
-   
-//     return router;
-//   }
+const userRoute = express.Router();
+userRoute.route('/users')
+console.log('users')
+    .get((req, res) => {
+        user.find({}, (err, users) => {
+            res.json(users)
+        })  
+    })
+    userRoute.route('/:userId')
+    .get((req, res) => {
+        user.findById(req.params.usersId, (err, users) => {
+            res.json(users)
+        })  
+    })
